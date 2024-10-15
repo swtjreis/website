@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page dedicada às divas pop, informações e contato.">
+    <title>POPSTAR POWER</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>POPSTAR POWER</h1>
+            <h2>por aqui, rola cultura pop com muita informação sobre os artistas mais legais do mundo! :)</h2>
+            <ul>
+                <li><a href="#home">início</a></li>
+                <li><a href="#divas">infos</a></li>
+                <li><a href="#contato">fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>bem-vindo ao Universo das Divas Pop</h2>
+        <p>saiba mais sobre as maiores estrelas da música pop, suas histórias e seus sucessos!</p>
+        <button onclick="location.href='#contato';">ENTRAR EM CONTATO</button>
+    </section>
+
+    <section id="divas">
+        <h2>DIVAS POP</h2>
+        <article>
+            <h3>Beyoncé</h3>
+            <img src="imagens/beynabahia.webp" alt="beyoncé e sua inesperada vinda ao Brasil, em 2023.">
+            <p>Queen B, nascida em 4 de setembro de 1981, em Houston, Texas, é uma cantora, compositora, produtora e atriz e considerada uma das artistas mais influentes da música contemporânea. Ela ganhou reconhecimento inicialmente como vocalista do Destiny's Child, uma das girl bands mais vendidas de todos os tempos. Em 2003, Beyoncé seguiu sua carreira solo com o álbum "Dangerously in Love", que foi um sucesso mundial e solidificou seu status de estrela global.
+            <br> <br>
+            <br> Bey é conhecida por sua voz poderosa, presença de palco magnética e sua capacidade de mesclar gêneros como R&B, pop, soul e hip hop. Seus álbuns, como "Beyoncé" (2013) e "Lemonade" (2016), foram aclamados pela crítica e abordaram temas de empoderamento feminino, racismo e questões sociais. Ela também é conhecida por suas performances ao vivo de alta energia, como a aclamada apresentação no Coachella de 2018, ou simplesmente o tão aclamado "Beychella".
+            <br> <br>
+                Além da música, Beyoncé é uma empresária de sucesso, ativista pelos direitos civis e feminista, usando sua plataforma para defender causas sociais. Com inúmeros prêmios, incluindo 32 Grammys, ela é uma das artistas mais premiadas de todos os tempos, tendo impactado profundamente a cultura pop global.</p>
+        </article>
+        <article>
+            <h3>Ariana Grande</h3>
+            <img src="imagens/ari2foto.png" alt="">
+            <p>Ariana Grande, nascida em 26 de junho de 1993, em Boca Raton, Flórida, é uma cantora, compositora e atriz americana. Ela começou sua carreira no teatro musical, especialmente com seu papel como Cat Valentine na série de televisão "Victorious," da Nickelodeon, em 2010. A partir de 2013, Ariana lançou sua carreira musical com o álbum de estreia "Yours Truly," que incluiu o hit "The Way," e rapidamente se estabeleceu como uma das vozes mais poderosas da música pop contemporânea.
+                <br> <br>
+                Conhecida por sua impressionante extensão vocal e habilidades técnicas, Ariana ganhou fama com sucessos como "Problem," "Bang Bang," "Dangerous Woman," "No Tears Left to Cry," e "Thank U, Next." Seus álbuns, como "Sweetener" e "Thank U, Next," foram aclamados pela crítica e conquistaram vários prêmios, incluindo Grammy Awards.
+                <br> <br>
+                Além da música, Ariana é reconhecida por seu ativismo, especialmente em questões de direitos LGBT e saúde mental. Ela também é uma figura influente nas redes sociais, com uma base de fãs dedicada e engajada.</p>
+        </article>
+        <article>
+            <h3>Rihanna</h3>
+            <img src="imagens/riri.webp" alt="">
+            <p>Rihanna, nascida Robyn Rihanna Fenty em 20 de fevereiro de 1988, em Saint Michael, Barbados, é uma cantora, compositora, atriz e empresária. Ela ganhou destaque na indústria da música em 2005 com o lançamento de seu álbum de estreia, "Music of the Sun," que apresentou o hit "Pon de Replay." Desde então, Rihanna se tornou uma das artistas mais bem-sucedidas da história da música, conhecida por sua versatilidade e por mesclar estilos como pop, R&B, reggae e dance.
+            <br> <br>
+                Com sucessos como "Umbrella," "We Found Love," "Diamonds," e "Work," Rihanna acumulou inúmeros prêmios, incluindo 9 Grammys e mais de 250 milhões de discos vendidos mundialmente, tornando-se uma das artistas mais vendidas de todos os tempos.
+            <br> <br>
+                Além de sua carreira musical, Rihanna é uma influente empresária e filantropa. Em 2017, ela lançou a linha de maquiagem Fenty Beauty, que recebeu aclamação por sua inclusividade em tons de pele, e em 2019, lançou a marca de lingerie Savage X Fenty. Ela também é conhecida por seu ativismo em causas sociais, incluindo direitos das mulheres e igualdade racial.</p>
+        </article>
+    </section>
+
+   
+    <section id="contato">
+        <h2>contato</h2>
+        <form id="contactForm" action="mailto:master@divaspop.com" method="post">
+            <label for="name">nome:</label>
+            <input type="text" id="name" name="name" required maxlength="50">
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required maxlength="11" onblur="validateCPF(this.value)">
+
+            <label for="email">e-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>sexo:</label>
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <label for="feminino">feminino</label>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">masculino</label>
+
+           <h3>diva favorita:</h3>
+            <select id="divaFavorita" name="divaFavorita">
+                <option value="beyonce">Beyoncé</option>
+                <option value="ladygaga">Lady Gaga</option>
+                <option value="rihanna">Rihanna</option>
+            </select>
+
+
+            <label for="mensagem">alguma sugestão ou reclamação? escreva aqui:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" maxlength="500"></textarea>
+
+            <label for="senha">senha:</label>
+            <input type="password" id="senha" name="senha" required maxlength="16">
+
+
+            <button type="submit">ENVIAR</button>
+            <button type="reset">LIMPAR TUDO</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 POPSTAR POWER - Todos os direitos reservados.</p>
+        <p>dados coletados conforme a LGPD. Saiba mais sobre <a href="#politica">como cuidamos da sua Privacidade</a>.</p>
+        <p>fala com a gente: popstarpower@gmail.com | CNPJ: 12.345.678/0001-99</p>
+    </footer>
+
+</body>
+</html>
